@@ -1,0 +1,30 @@
+{
+  "name": "wuzzat",
+  "version": "0.1.0",
+  "description": "A simple client/server TCP communication manager.",
+  "author": "Steven Berry <steven@sberry.me> (http://www.sberry.me/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjberry/wuzzat.git"
+  },
+  "main": "main",
+  "dependencies": {
+    "binary-split": "^1.0.0",
+    "bluebird": "^3.2.1",
+    "msgpack": "^1.0.2"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.2.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-jscs": "^2.5.0",
+    "grunt-jsonlint": "^1.0.7",
+    "grunt-mocha-test": "^0.12.7",
+    "jshint-stylish": "^2.1.0",
+    "load-grunt-tasks": "^3.4.0",
+    "log": "^1.4.0",
+    "mocha": "^2.3.4"
+  }
+}

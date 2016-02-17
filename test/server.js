@@ -1,31 +1,27 @@
-var Log = require('log');
+const Log = require('log');
 
-var Server = require('../lib/server');
+const Server = require('../lib/server');
 
 
-var logger = new Log();
-var server = new Server('tcp://localhost:5666', {
-	serializer: require('../lib/serializers/msgpack')
-});
+const logger = new Log();
+const server = new Server('tcp://localhost:5666');
 
-server.on('data', function(data, socket) {
-	console.log(data);
+server.on('data', function(data, connection) {
+	logger.debug('Data received', data);
 
-	this.serialize(data).then(function(data) {
-		socket.write(data);
-	});
+	connection.write(data);
 });
 
 server.on('error', function(err) {
 	logger.error(err);
 });
 
-server.on('connect', function(connection) {
-	logger.debug('Client connected from ' + connection.address + ':' + connection.port + '.');
+server.on('connection', function(connection) {
+	logger.info('Client connected from ' + connection.address + ':' + connection.port + '.');
 });
 
-server.on('disconnect', function(connection) {
-	logger.debug('Client disconnected from ' + connection.address + ':' + connection.port + '.');
+server.on('disconnection', function(connection) {
+	logger.info('Client disconnected from ' + connection.address + ':' + connection.port + '.');
 });
 
 server.once('listening', function() {

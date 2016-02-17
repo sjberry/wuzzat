@@ -1,6 +1,6 @@
 {
   "name": "wuzzat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple client/server TCP communication manager.",
   "author": "Steven Berry <steven@sberry.me> (http://www.sberry.me/)",
   "license": "MIT",
@@ -10,9 +10,7 @@
   },
   "main": "main",
   "dependencies": {
-    "binary-split": "^1.0.0",
-    "bluebird": "^3.2.1",
-    "msgpack": "^1.0.2"
+    "frame-stream": "^1.1.1"
   },
   "devDependencies": {
     "chai": "^3.4.1",

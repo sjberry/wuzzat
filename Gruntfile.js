@@ -58,12 +58,6 @@ module.exports = function(grunt) {
 					reporter: 'dot'
 				},
 				src: '<%= mochaTest.full.src %>'
-			},
-			nyan: {
-				options: {
-					reporter: 'nyan'
-				},
-				src: '<%= mochaTest.full.src %>'
 			}
 		}
 	});
@@ -84,6 +78,7 @@ module.exports = function(grunt) {
 
 	// Default grunt
 	grunt.registerTask('default', [
-		'lint'
+		'lint',
+		'mochaTest:grid'
 	]);
 };

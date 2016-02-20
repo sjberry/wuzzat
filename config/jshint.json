@@ -14,6 +14,8 @@
 
   "globals": {
     "Promise": true,
+    "afterEach": true,
+    "beforeEach": true,
     "describe": true,
     "it": true,
     "settings": true

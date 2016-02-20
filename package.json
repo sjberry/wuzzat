@@ -1,6 +1,6 @@
 {
   "name": "wuzzat",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple client/server TCP communication manager.",
   "author": "Steven Berry <steven@sberry.me> (http://www.sberry.me/)",
   "license": "MIT",
@@ -23,6 +23,8 @@
     "jshint-stylish": "^2.1.0",
     "load-grunt-tasks": "^3.4.0",
     "log": "^1.4.0",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
   }
 }
